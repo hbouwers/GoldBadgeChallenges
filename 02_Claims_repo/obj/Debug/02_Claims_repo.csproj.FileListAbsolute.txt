@@ -1,0 +1,6 @@
+C:\Users\bouwe\Desktop\ElevenFiftyProjects\DotNetProjects\GoldBadgeChallenges\GoldBadge\02_Claims_repo\bin\Debug\02_Claims_repo.dll
+C:\Users\bouwe\Desktop\ElevenFiftyProjects\DotNetProjects\GoldBadgeChallenges\GoldBadge\02_Claims_repo\bin\Debug\02_Claims_repo.pdb
+C:\Users\bouwe\Desktop\ElevenFiftyProjects\DotNetProjects\GoldBadgeChallenges\GoldBadge\02_Claims_repo\obj\Debug\02_Claims_repo.csprojAssemblyReference.cache
+C:\Users\bouwe\Desktop\ElevenFiftyProjects\DotNetProjects\GoldBadgeChallenges\GoldBadge\02_Claims_repo\obj\Debug\02_Claims_repo.csproj.CoreCompileInputs.cache
+C:\Users\bouwe\Desktop\ElevenFiftyProjects\DotNetProjects\GoldBadgeChallenges\GoldBadge\02_Claims_repo\obj\Debug\02_Claims_repo.dll
+C:\Users\bouwe\Desktop\ElevenFiftyProjects\DotNetProjects\GoldBadgeChallenges\GoldBadge\02_Claims_repo\obj\Debug\02_Claims_repo.pdb
