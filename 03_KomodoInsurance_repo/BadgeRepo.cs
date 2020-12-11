@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _03_KomodoInsurance_repo
 {
-    class BadgeRepo
+    public class BadgeRepo
     {
         Dictionary<int, Badge> _badgeDictionary = new Dictionary<int, Badge>();
 
