@@ -15,8 +15,13 @@ namespace _02_Claims_repo
         // Create
         public bool AddClaim(Claim claim)
         {
+            if(claim.ClaimId == 0)
+            {
+                claim.ClaimId = count;
+            }
+
             int old = _claims.Count;
-            claim.ClaimId = count;
+            
             _claims.Add(claim);
             if (_claims.Count > old)
             {
@@ -28,6 +33,7 @@ namespace _02_Claims_repo
                 return false;
             }
         }
+
 
         // Read
         public Claim GetClaimById(int id)

@@ -163,15 +163,51 @@ namespace _02_Claims_console
 
             // Get amount of damage
             Console.WriteLine("Amount of Damage:");
-            claim.ClaimAmount = int.Parse(Console.ReadLine());
+            keepRunning = true;
+            while(keepRunning)
+            try
+            {
+                claim.ClaimAmount = int.Parse(Console.ReadLine());
+                keepRunning = false;
+            }
+            catch
+            {
+                Console.WriteLine("Please enter numbers only");
+            }
 
             // Get date of accident
             Console.WriteLine("Date of Accident:");
-            claim.DateofIncident = DateTime.Parse(Console.ReadLine());
+            keepRunning = true;
+            while (keepRunning)
+            {
+                try 
+                {
+                    claim.DateofIncident = DateTime.Parse(Console.ReadLine());
+                    keepRunning = false;
+                }
+                catch
+                {
+                    Console.WriteLine("Please enter a valid date - eg ##/##/####");
+                }
+            }
+            
 
             // Get date of claim
             Console.WriteLine("Date of Claim:");
-            claim.DateOfClaim = DateTime.Parse(Console.ReadLine());
+            keepRunning = true;
+            while (keepRunning)
+            {
+                try
+                {
+                    claim.DateOfClaim = DateTime.Parse(Console.ReadLine());
+                    keepRunning = false;
+                }
+                catch
+                {
+                    Console.WriteLine("Please enter a valid date - eg ##/##/####");
+                }
+            }
+            
 
             // isValid
             if (claim.IsValid)

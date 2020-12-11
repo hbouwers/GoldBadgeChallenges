@@ -8,7 +8,7 @@ namespace _01_KomodoCafe_tests
     [TestClass]
     public class KomodoCafeRepoTests
     {
-        // These are fields yo. Use them in all the test methods you want. That's it. You know you want to
+        // These are fields yo. Use them in all the test methods if you want. That's it. You know you want to
         private MenuRepository _repo;
         private Menu _menuItem;
 

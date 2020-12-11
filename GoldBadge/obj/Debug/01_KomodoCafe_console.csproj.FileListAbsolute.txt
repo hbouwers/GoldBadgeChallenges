@@ -1,0 +1,10 @@
+C:\Users\bouwe\Desktop\ElevenFiftyProjects\DotNetProjects\GoldBadgeChallenges\GoldBadge\GoldBadge\bin\Debug\GoldBadge.exe.config
+C:\Users\bouwe\Desktop\ElevenFiftyProjects\DotNetProjects\GoldBadgeChallenges\GoldBadge\GoldBadge\bin\Debug\GoldBadge.exe
+C:\Users\bouwe\Desktop\ElevenFiftyProjects\DotNetProjects\GoldBadgeChallenges\GoldBadge\GoldBadge\bin\Debug\GoldBadge.pdb
+C:\Users\bouwe\Desktop\ElevenFiftyProjects\DotNetProjects\GoldBadgeChallenges\GoldBadge\GoldBadge\bin\Debug\01_KomodCafe_repo.dll
+C:\Users\bouwe\Desktop\ElevenFiftyProjects\DotNetProjects\GoldBadgeChallenges\GoldBadge\GoldBadge\bin\Debug\01_KomodCafe_repo.pdb
+C:\Users\bouwe\Desktop\ElevenFiftyProjects\DotNetProjects\GoldBadgeChallenges\GoldBadge\GoldBadge\obj\Debug\01_KomodoCafe_console.csprojAssemblyReference.cache
+C:\Users\bouwe\Desktop\ElevenFiftyProjects\DotNetProjects\GoldBadgeChallenges\GoldBadge\GoldBadge\obj\Debug\01_KomodoCafe_console.csproj.CoreCompileInputs.cache
+C:\Users\bouwe\Desktop\ElevenFiftyProjects\DotNetProjects\GoldBadgeChallenges\GoldBadge\GoldBadge\obj\Debug\01_KomodoCafe_console.csproj.CopyComplete
+C:\Users\bouwe\Desktop\ElevenFiftyProjects\DotNetProjects\GoldBadgeChallenges\GoldBadge\GoldBadge\obj\Debug\GoldBadge.exe
+C:\Users\bouwe\Desktop\ElevenFiftyProjects\DotNetProjects\GoldBadgeChallenges\GoldBadge\GoldBadge\obj\Debug\GoldBadge.pdb

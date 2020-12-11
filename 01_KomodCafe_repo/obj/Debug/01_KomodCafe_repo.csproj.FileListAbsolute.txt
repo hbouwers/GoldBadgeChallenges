@@ -1,0 +1,6 @@
+C:\Users\bouwe\Desktop\ElevenFiftyProjects\DotNetProjects\GoldBadgeChallenges\GoldBadge\01_KomodCafe_repo\bin\Debug\01_KomodCafe_repo.dll
+C:\Users\bouwe\Desktop\ElevenFiftyProjects\DotNetProjects\GoldBadgeChallenges\GoldBadge\01_KomodCafe_repo\bin\Debug\01_KomodCafe_repo.pdb
+C:\Users\bouwe\Desktop\ElevenFiftyProjects\DotNetProjects\GoldBadgeChallenges\GoldBadge\01_KomodCafe_repo\obj\Debug\01_KomodCafe_repo.csprojAssemblyReference.cache
+C:\Users\bouwe\Desktop\ElevenFiftyProjects\DotNetProjects\GoldBadgeChallenges\GoldBadge\01_KomodCafe_repo\obj\Debug\01_KomodCafe_repo.csproj.CoreCompileInputs.cache
+C:\Users\bouwe\Desktop\ElevenFiftyProjects\DotNetProjects\GoldBadgeChallenges\GoldBadge\01_KomodCafe_repo\obj\Debug\01_KomodCafe_repo.dll
+C:\Users\bouwe\Desktop\ElevenFiftyProjects\DotNetProjects\GoldBadgeChallenges\GoldBadge\01_KomodCafe_repo\obj\Debug\01_KomodCafe_repo.pdb
