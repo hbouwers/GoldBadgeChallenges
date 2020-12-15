@@ -73,11 +73,11 @@ namespace _02_Claims_console
             List<Claim> claims = _claimRepo.GetClaims();
 
             // Display claims
-            Console.WriteLine("ClaimID\t" + "Type\t" + "Description\t" + "Amount\t" + "DateOfAccident\t" + "DateOfClaim\t" + "IsValid");
+            Console.WriteLine("ClaimID\t" + "Type\t" + "Description\t\t" + "Amount\t" + "DateOfAccident\t" + "DateOfClaim\t" + "IsValid");
 
             foreach (Claim i in claims)
             {
-                Console.WriteLine($"{i.ClaimId}\t" + $"{i.ClaimType}\t" + $"{i.Description}\t" + $"{i.ClaimAmount}\t" + $"{i.DateofIncident}\t" + $"{i.DateOfClaim}\t" + $"{i.IsValid}");
+                Console.WriteLine($"{i.ClaimId}\t" + $"{i.ClaimType}\t" + $"{i.Description}\t" + $"{i.ClaimAmount}\t" + $"{i.DateofIncident.ToShortDateString()}\t" + $"{i.DateOfClaim.ToShortDateString()}\t" + $"{i.IsValid}");
             }
         }
 
