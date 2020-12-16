@@ -40,10 +40,10 @@ namespace _02_Claims_tests
         }
 
         [TestMethod]
-        public void MyTestMethod()
+        public void RemoveClaimFromTopOfQueue()
         {
             // Assert
-            Assert.IsTrue(_repo.DeleteClaimById(1));
+           // Assert.IsTrue(_repo.RemoveClaimFromTopOfQueue());
         }
     }
 }

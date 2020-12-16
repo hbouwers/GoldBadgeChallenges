@@ -72,26 +72,50 @@ namespace _03_KomodoInsurance_console
 
             // Get user input Badge Number
             Console.WriteLine("What is the number on the badge:");
-            badge.BadgeID = int.Parse(Console.ReadLine());
+            bool keepRunning = true;
+            while (keepRunning)
+            {
+                try
+                {
+                    badge.BadgeID = int.Parse(Console.ReadLine());
+                    keepRunning = false;
+                }
+                catch
+                {
+                    Console.WriteLine("Please enter numbers only");
+                }
+            }
 
             // Get list of doors
             List<string> doors = new List<string>();
-            bool keepRunning = true;
+            keepRunning = true;
             while (keepRunning)
             {
                 Console.WriteLine("List a door that it needs access to:");
                 string input = Console.ReadLine();
                 doors.Add(input);
                 Console.WriteLine("Any other doors(y/n)?");
-                input = Console.ReadLine();
-                if(input.ToLower() == "n")
+                bool keepRunning2 = true;
+                while (keepRunning2)
                 {
-                    keepRunning = false;
+                    input = Console.ReadLine();
+
+                    if (input.ToLower() == "n")
+                    {
+                        keepRunning = false;
+                        keepRunning2 = false;
+                    }
+                    else if (input.ToLower() == "y")
+                    {
+                        keepRunning = true;
+                        keepRunning2 = false;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Please enter valid y or n");
+                    }
                 }
-                else if(input.ToLower() == "y")
-                {
-                    keepRunning = true;
-                }
+                
             }
             badge.DoorNames = doors;
 
@@ -157,11 +181,11 @@ namespace _03_KomodoInsurance_console
             Console.Clear();
             Dictionary<int, Badge> badgeDictionary = _badgeRepo.GetBadges();
             var sb = new System.Text.StringBuilder();
-            sb.Append(String.Format("{0,6} {1,15}\n", "Badge #", "Door Access"));
+            sb.Append(String.Format("{0,-8} {1,-15}\n", "Badge #", "Door Access"));
             foreach(var kvp in badgeDictionary)
             {
                 string doorsString = StringOfDoors(kvp.Value.DoorNames);
-                sb.Append(String.Format("{0,6} {1,15}\n", kvp.Key, doorsString));
+                sb.Append(String.Format("{0,-8} {1,-15}\n", kvp.Key, doorsString));
             }
             Console.WriteLine(sb);
         }
@@ -175,7 +199,14 @@ namespace _03_KomodoInsurance_console
             }
             foreach(var door in doors)
             {
-                doorsString = doorsString + $" { door }";
+                if (doors.Last() == door)
+                {
+                    doorsString = doorsString + $"{door}";
+                }
+                else
+                {
+                    doorsString = doorsString + $"{ door },";
+                }
             }
             return doorsString;
         }

@@ -9,8 +9,9 @@ namespace _02_Claims_repo
 {
     public class ClaimRepo
     {
-        public List<Claim> _claims = new List<Claim>();
+        // public List<Claim> _claims = new List<Claim>();
         private int count = 1;
+        public Queue<Claim> _claims = new Queue<Claim>();
 
         // Create
         public bool AddClaim(Claim claim)
@@ -22,7 +23,7 @@ namespace _02_Claims_repo
 
             int old = _claims.Count;
             
-            _claims.Add(claim);
+            _claims.Enqueue(claim);
             if (_claims.Count > old)
             {
                 count++;
@@ -48,20 +49,15 @@ namespace _02_Claims_repo
             return null;
         }
 
-        public List<Claim> GetClaims()
+        public Queue<Claim> GetClaims()
         {
             return _claims;
         }
 
         // Delete
-        public bool DeleteClaimById(int id)
+        public void RemoveClaimFromTopOfQueue()
         {
-            Claim claim = GetClaimById(id);
-            if(claim != null)
-            {
-                return _claims.Remove(claim);
-            }
-            return false;
+             _claims.Dequeue();
         }
     }
 }

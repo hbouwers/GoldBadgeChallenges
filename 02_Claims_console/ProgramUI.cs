@@ -70,7 +70,7 @@ namespace _02_Claims_console
         {
             Console.Clear();
             // Get claims
-            List<Claim> claims = _claimRepo.GetClaims();
+            Queue<Claim> claims = _claimRepo.GetClaims();
 
             // Display claims
             Console.WriteLine("ClaimID\t" + "Type\t" + "Description\t\t" + "Amount\t" + "DateOfAccident\t" + "DateOfClaim\t" + "IsValid");
@@ -100,12 +100,12 @@ namespace _02_Claims_console
                 string input = Console.ReadLine();
                 if(input == "y")
                 {
-                    _claimRepo.DeleteClaimById(claim.ClaimId);
+                    _claimRepo.RemoveClaimFromTopOfQueue();
                     keepRunning = false;
                 }
                 else if(input == "n")
                 {
-                    _claimRepo.DeleteClaimById(claim.ClaimId);
+                    _claimRepo.RemoveClaimFromTopOfQueue();
                     _claimRepo.AddClaim(claim);
                     keepRunning = false;
                 }
