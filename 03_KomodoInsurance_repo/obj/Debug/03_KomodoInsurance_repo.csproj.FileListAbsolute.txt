@@ -1,0 +1,5 @@
+C:\Users\bouwe\Desktop\ElevenFiftyProjects\DotNetProjects\GoldBadgeChallenges\GoldBadge\03_KomodoInsurance_repo\bin\Debug\03_KomodoInsurance_repo.dll
+C:\Users\bouwe\Desktop\ElevenFiftyProjects\DotNetProjects\GoldBadgeChallenges\GoldBadge\03_KomodoInsurance_repo\bin\Debug\03_KomodoInsurance_repo.pdb
+C:\Users\bouwe\Desktop\ElevenFiftyProjects\DotNetProjects\GoldBadgeChallenges\GoldBadge\03_KomodoInsurance_repo\obj\Debug\03_KomodoInsurance_repo.csproj.CoreCompileInputs.cache
+C:\Users\bouwe\Desktop\ElevenFiftyProjects\DotNetProjects\GoldBadgeChallenges\GoldBadge\03_KomodoInsurance_repo\obj\Debug\03_KomodoInsurance_repo.dll
+C:\Users\bouwe\Desktop\ElevenFiftyProjects\DotNetProjects\GoldBadgeChallenges\GoldBadge\03_KomodoInsurance_repo\obj\Debug\03_KomodoInsurance_repo.pdb
