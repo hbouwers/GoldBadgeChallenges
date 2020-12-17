@@ -21,11 +21,31 @@ namespace _03_KomodoInsurance_tests
         }
 
         [TestMethod]
-        public void AddBadge()
+        public void AddBadgeShouldReturnTrue()
         {
+            // arrange
+            Badge second = new Badge(22345, new List<string> { "A1", "A4", "B1", "B2" });
 
+            // act/assert
+            Assert.IsTrue(_repo.AddBadge(second.BadgeID, second));
+        }
+
+        [TestMethod]
+        public void GetBadgeShouldReturnTypeBadge()
+        {
+            // act
+            Badge expected = _badge;
+            Badge actual = _repo.GetBadgeByKey(12345);
+
+            // assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void DeleteDoorsShouldReturnTrue()
+        {
+            // assert
+            Assert.IsTrue(_repo.RemoveDoor(_badge.BadgeID, "A7"));
         }
     }
 }
-
-// Badge second = new Badge(22345, new List<string> { "A1", "A4", "B1", "B2" });
