@@ -73,11 +73,13 @@ namespace _02_Claims_console
             Queue<Claim> claims = _claimRepo.GetClaims();
 
             // Display claims
-            Console.WriteLine("ClaimID\t" + "Type\t" + "Description\t\t" + "Amount\t" + "DateOfAccident\t" + "DateOfClaim\t" + "IsValid");
+            //Console.WriteLine("ClaimID\t" + "Type\t" + "Description\t\t" + "Amount\t" + "DateOfAccident\t" + "DateOfClaim\t" + "IsValid");
+            Console.WriteLine(String.Format("{0,-8} {1,-6} {2,-25} {3,-8} {4,-15} {5,-15} {6,-8}\n", "ClaimID", "Type", "Description", "Amount", "DateOfAccident", "DateOfClaim", "IsValid"));
 
             foreach (Claim i in claims)
             {
-                Console.WriteLine($"{i.ClaimId}\t" + $"{i.ClaimType}\t" + $"{i.Description}\t" + $"{i.ClaimAmount}\t" + $"{i.DateofIncident.ToShortDateString()}\t" + $"{i.DateOfClaim.ToShortDateString()}\t" + $"{i.IsValid}");
+                Console.WriteLine(String.Format("{0,-8} {1,-6} {2,-25} {3,-8} {4,-15} {5,-15} {6,-8}", i.ClaimId,i.ClaimType,i.Description,i.ClaimAmount,i.DateofIncident.ToShortDateString(),i.DateOfClaim.ToShortDateString(), i.IsValid));
+                // Console.WriteLine($"{i.ClaimId}\t" + $"{i.ClaimType}\t" + $"{i.Description}\t" + $"{i.ClaimAmount}\t" + $"{i.DateofIncident.ToShortDateString()}\t" + $"{i.DateOfClaim.ToShortDateString()}\t" + $"{i.IsValid}");
             }
         }
 

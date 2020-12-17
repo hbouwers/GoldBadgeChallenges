@@ -105,16 +105,23 @@ namespace GoldBadge
 
             // Price
             Console.WriteLine("Enter the price");
-            int price = int.Parse(Console.ReadLine());
-            item.Price = price;
-
-            if (_menuRepository.AddMenuItem(item))
+            try
             {
-                Console.WriteLine("Item successfully added!");
+                int price = int.Parse(Console.ReadLine());
+                item.Price = price;
+                if (_menuRepository.AddMenuItem(item))
+                {
+                    Console.WriteLine("Item successfully added!");
+                }
+                else
+                {
+                    Console.WriteLine("There was a problem adding the item");
+                }
             }
-            else
+            catch (Exception)
             {
-                Console.WriteLine("There was a problem adding the item");
+
+                Console.WriteLine("Invalid input");
             }
         }
         // View menu
@@ -128,7 +135,7 @@ namespace GoldBadge
             // Display Id and Meal name
             foreach (Menu i in menu)
             {
-                Console.WriteLine("Id: " + i.Id + i.MealName);
+                Console.WriteLine("Id: " + i.Id + " " + i.MealName);
             }
         }
 
@@ -140,26 +147,33 @@ namespace GoldBadge
 
             // Get user input
             Console.WriteLine("Enter the id of the meal you would like to see");
-            int input = int.Parse(Console.ReadLine());
-
-            // Get Item
-            Menu item = _menuRepository.GetMenuItemById(input);
-
-            // Null check
-            if (item == null)
+            try
             {
-                Console.WriteLine("No item by that id");
+                int input = int.Parse(Console.ReadLine());
+
+                // Get Item
+                Menu item = _menuRepository.GetMenuItemById(input);
+
+                // Null check
+                if (item == null)
+                {
+                    Console.WriteLine("No item by that id");
+                }
+
+                // Display item
+                Console.WriteLine(
+                    $"Name: {item.MealName}\n" +
+                    $"Description: {item.Description}\n" +
+                    $"Ingredients: " + StringOfIngredients(item.Ingredients) + "\n" +
+                    $"Price: ${item.Price}\n"
+                    );
             }
-
-            // Display item
-            Console.WriteLine(
-                $"Name: {item.MealName}\n" +
-                $"Description: {item.Description}\n" +
-                $"Ingredients: {item.Ingredients}\n" +
-                $"Price: ${item.Price}\n"
-                );
-
+            catch
+            {
+                Console.WriteLine("Invalid input");
+            }
         }
+
 
         // Delete menu item
         private void DeleteMenuItem()
@@ -168,17 +182,41 @@ namespace GoldBadge
 
             // Get user input
             Console.WriteLine("Enter the id of the item you would like to delete");
-            int input = int.Parse(Console.ReadLine());
+            try
+            {
+                int input = int.Parse(Console.ReadLine());
 
-            // Get item
-            if (_menuRepository.DeleteMenuItem(input))
-            {
-                Console.WriteLine("Item successfully deleted");
+                // Get item
+                if (_menuRepository.DeleteMenuItem(input))
+                {
+                    Console.WriteLine("Item successfully deleted");
+                }
+                else
+                {
+                    Console.WriteLine("There was a problem deleting the item");
+                }
             }
-            else
+            catch
             {
-                Console.WriteLine("There was a problem deleting the item");
+
+                Console.WriteLine("invalid input");
             }
+
+        }
+
+        // Ingredients to string helper
+        private string StringOfIngredients(List<string> ingredients)
+        {
+            string ingredientsString = "";
+            foreach (string ingredient in ingredients)
+            {
+                if(ingredients[0] == ingredient)
+                {
+                    ingredientsString = ingredient;
+                }
+                ingredientsString = ingredientsString +", "+ ingredient;
+            }
+            return ingredientsString;
         }
 
         // Seed data

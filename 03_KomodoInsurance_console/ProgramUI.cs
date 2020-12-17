@@ -139,7 +139,7 @@ namespace _03_KomodoInsurance_console
             bool keepRunning = true;
             while (keepRunning)
             {
-                Console.WriteLine("What would you like to do?\n" + String.Format("{0,6}\n{1,6}","\t1.Remove a door","\t2.Add a door"));
+                Console.WriteLine("What would you like to do?\n" + String.Format("{0,6}\n{1,6}\n{2,6}","\t1.Remove a door","\t2.Add a door","\t3.Cancel"));
                 // get user input
                 string userInput = Console.ReadLine();
 
@@ -190,6 +190,7 @@ namespace _03_KomodoInsurance_console
             Console.WriteLine(sb);
         }
 
+        // Helper method
         private string StringOfDoors(List<string> doors)
         {
             string doorsString = "";

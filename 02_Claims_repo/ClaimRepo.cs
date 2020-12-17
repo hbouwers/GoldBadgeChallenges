@@ -55,9 +55,11 @@ namespace _02_Claims_repo
         }
 
         // Delete
-        public void RemoveClaimFromTopOfQueue()
+        public bool RemoveClaimFromTopOfQueue()
         {
+            int count = _claims.Count;
              _claims.Dequeue();
+            return count > _claims.Count;
         }
     }
 }

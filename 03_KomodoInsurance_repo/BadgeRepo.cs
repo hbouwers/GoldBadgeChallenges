@@ -15,7 +15,7 @@ namespace _03_KomodoInsurance_repo
         {
             int startLength = _badgeDictionary.Count;
             _badgeDictionary.Add(badgeId, badge);
-            return startLength < _badgeDictionary.Count ? true : false;
+            return startLength < _badgeDictionary.Count;
         }
 
         // Read
@@ -33,7 +33,7 @@ namespace _03_KomodoInsurance_repo
             return _badgeDictionary;
         }
 
-        // Update
+        // Update => Not used
         public string UpdateBadge(int key, Badge badge)
         {
             if(_badgeDictionary[key] == null)
@@ -52,7 +52,7 @@ namespace _03_KomodoInsurance_repo
             return _badgeDictionary[key].DoorNames.Remove(door);
         }
 
-        // Delete
+        // Delete => Not used
         public bool DeleteDoors(int key)
         {
             if(_badgeDictionary[key] == null)
