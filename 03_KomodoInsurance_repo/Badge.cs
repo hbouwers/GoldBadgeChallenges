@@ -9,7 +9,7 @@ namespace _03_KomodoInsurance_repo
     public class Badge
     {
         public int BadgeID { get; set; }
-        public List<string> DoorNames { get; set; }
+        public List<string> DoorNames { get; set; } = new List<string>();
         public Badge() { }
         public Badge(int badgeId, List<string> doorNames)
         {

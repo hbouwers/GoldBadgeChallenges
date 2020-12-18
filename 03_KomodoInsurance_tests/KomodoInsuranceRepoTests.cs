@@ -12,7 +12,7 @@ namespace _03_KomodoInsurance_tests
         private BadgeRepo _repo;
         private Badge _badge;
 
-        [TestMethod]
+        [TestInitialize]
         public void Arrange()
         {
             _repo = new BadgeRepo();
@@ -23,11 +23,12 @@ namespace _03_KomodoInsurance_tests
         [TestMethod]
         public void AddBadgeShouldReturnTrue()
         {
+            //BadgeRepo _repos = new BadgeRepo();
             // arrange
             Badge second = new Badge(22345, new List<string> { "A1", "A4", "B1", "B2" });
-
+            bool wasAdded = _repo.AddBadge(second.BadgeID, second);
             // act/assert
-            Assert.IsTrue(_repo.AddBadge(second.BadgeID, second));
+            Assert.IsTrue(wasAdded);
         }
 
         [TestMethod]
@@ -39,6 +40,16 @@ namespace _03_KomodoInsurance_tests
 
             // assert
             Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void GetBadgesShouldNotBeNull()
+        {
+            // act
+            Dictionary<int, Badge> badges = _repo.GetBadges();
+
+            // assert
+            Assert.IsNotNull(badges);
         }
 
         [TestMethod]

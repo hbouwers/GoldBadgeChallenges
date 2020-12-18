@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using _02_Claims_repo;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -37,6 +38,16 @@ namespace _02_Claims_tests
 
             // Assert
             Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void GetClaimsShouldNotBeNull()
+        {
+            // act
+            Queue<Claim> claims = _repo.GetClaims();
+
+            // assert
+            Assert.IsNotNull(claims);
         }
 
         [TestMethod]
