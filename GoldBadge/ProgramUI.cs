@@ -29,7 +29,7 @@ namespace GoldBadge
                     "2. View Menu\n" +
                     "3. View Menu Item\n" +
                     "4. Delete Menu Item\n" +
-                    "Exit \n"
+                    "5. Exit \n"
                     );
 
                 // Get the user's input
@@ -104,25 +104,30 @@ namespace GoldBadge
             item.Ingredients = ingredients;
 
             // Price
-            Console.WriteLine("Enter the price");
-            try
+            run = true;
+            while (run)
             {
-                int price = int.Parse(Console.ReadLine());
-                item.Price = price;
-                if (_menuRepository.AddMenuItem(item))
+                try
                 {
-                    Console.WriteLine("Item successfully added!");
+                    Console.WriteLine("Enter the price");
+                    int price = int.Parse(Console.ReadLine());
+                    item.Price = price;
+                    if (_menuRepository.AddMenuItem(item))
+                    {
+                        Console.WriteLine("Item successfully added!");
+                    }
+                    else
+                    {
+                        Console.WriteLine("There was a problem adding the item");
+                    }
+                    run = false;
                 }
-                else
+                catch (Exception e)
                 {
-                    Console.WriteLine("There was a problem adding the item");
+                    Console.WriteLine(e.Message);
                 }
             }
-            catch (Exception)
-            {
-
-                Console.WriteLine("Invalid input");
-            }
+            
         }
         // View menu
         private void ViewMenu()
