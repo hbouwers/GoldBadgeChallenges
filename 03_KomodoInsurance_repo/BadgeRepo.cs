@@ -13,6 +13,10 @@ namespace _03_KomodoInsurance_repo
         // Create
         public bool AddBadge(int badgeId, Badge badge)
         {
+            if (_badgeDictionary.ContainsKey(badgeId))
+            {
+                return false;
+            }
             int startLength = _badgeDictionary.Count;
             _badgeDictionary.Add(badgeId, badge);
             return startLength < _badgeDictionary.Count;
